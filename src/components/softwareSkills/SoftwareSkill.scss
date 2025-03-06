@@ -1,0 +1,44 @@
+@import "../../_globalColor";
+
+.software-skills-main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dev-icons {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.software-skill-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  transition: all 0.3s ease; /* Optional transition for smooth effect */
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: color 0.3s ease; /* Optional transition for smooth color change */
+}
+
+/* Hover effect for icon */
+.software-skill-inline:hover .skill-icon {
+  filter: brightness(1.5); /* Assuming $skillsColor is a predefined variable */
+}
+
+/* Hover effect for text */
+.software-skill-inline > p {
+  color: $subTitle; /* Default text color */
+  font-size: 10px;
+}
+
+.software-skill-inline:hover > p {
+  color: $skillsColor; /* Change text color when hovering over the icon */
+}
